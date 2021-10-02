@@ -23,7 +23,7 @@ function Navbar() {
   }, []);
 
   useEffect(() => {
-    if (screenSize < 768) {
+    if (screenSize < 800) {
       setActiveMenu(false);
     } else {
       setActiveMenu(true);
@@ -38,7 +38,7 @@ function Navbar() {
         </Typography.Title>
         <Button
           className="menu-control-container"
-          onClick={() => setActiveMenu(true)}
+          onClick={() => setActiveMenu(!activeMenu)}
         >
           <MenuOutlined />
         </Button>
